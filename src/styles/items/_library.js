@@ -16,6 +16,9 @@ export const LibraryContainer = styled.div`
   h2 {
     padding: 2rem;
   }
+  @media screen and ( max-width: 768px ) {
+    width: 100%;
+  }
 `
 
 export const LibrarySongContainer = styled.div`
@@ -23,6 +26,7 @@ export const LibrarySongContainer = styled.div`
   display: flex;
   align-items: center;
   padding: 1rem 2rem 1rem 2rem;
+  transition: background 0.3s ease;
   img {
     width: 30%;
   }

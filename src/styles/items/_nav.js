@@ -19,4 +19,10 @@ export const NavContainer = styled.nav`
       margin-left: 3px;
     }
   }
+  @media screen and ( max-width: 768px ) {
+    button {
+      z-index: 10;
+    }
+    width: 90%;
+  }
 `

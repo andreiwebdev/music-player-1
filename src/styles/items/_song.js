@@ -17,4 +17,9 @@ export const SongContainer = styled.div`
   h3 {
     font-size: 1rem;
   }
+  @media screen and ( max-width: 768px ) {
+    img {
+      width: 60%;
+    }
+  }
 `

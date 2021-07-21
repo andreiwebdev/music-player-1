@@ -36,5 +36,11 @@ export const GlobalStyle = createGlobalStyle`
     transform: translateX( 0% );
     opacity: 1;
   }
+  .App {
+    transition: all 0.5s ease;
+  }
+  .library-active {
+    margin-left: 20%;
+  }
 `
 
