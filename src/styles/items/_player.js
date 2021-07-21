@@ -29,6 +29,11 @@ export const TimeControl = styled.div`
     height: 16px;
     width: 16px;
   }
+  input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px; 
+  }
   p {
     padding: 1rem;
   }
