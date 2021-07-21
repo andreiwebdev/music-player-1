@@ -2,11 +2,10 @@
 import React from 'react';
 //Import Styles
 import { LibrarySongContainer, SongDescription } from '../styles/items/_library';
-import { playAudio } from '../util';
 
 const LibrarySong = ({ song, songs, setSongs, id, setCurrentSong, audioRef, isPlaying }) => {
-  const songSelectHandler = () => {
-    setCurrentSong( song );
+  const songSelectHandler = async () => {
+    await setCurrentSong( song );
     audioRef.current.play();
     // add active state
     const newSongs = songs.map( song => {
@@ -24,7 +23,7 @@ const LibrarySong = ({ song, songs, setSongs, id, setCurrentSong, audioRef, isPl
     });
     setSongs( newSongs );
     // check if the song is playing
-    playAudio( isPlaying, audioRef );
+    if(isPlaying) audioRef.current.play();
   };
   return(
     <LibrarySongContainer onClick={ songSelectHandler } className={ song.active ? `selected` : '' }>
